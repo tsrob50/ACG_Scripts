@@ -1,0 +1,8 @@
+# TLS 1.2 Registry Key
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319
+"SchUseStrongCrypto"=dword:00000001
+
+
+# Azure AD Connect Download Link
+https://www.microsoft.com/en-us/download/details.aspx?id=47594
+

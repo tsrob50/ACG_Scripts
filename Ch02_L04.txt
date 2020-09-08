@@ -1,0 +1,21 @@
+# Add users from PowerShell
+Connect-AzureAD
+
+# Add Group from PowerShell
+
+$PasswordProfile = New-Object -TypeName Microsoft.Open.AzureAD.Model.PasswordProfile
+
+$PasswordProfile.Password = “P@ssword!!"
+
+New-AzureADUser -DisplayName "PSUser" -PasswordProfile $PasswordProfile -UserPrincipalName "PSUser@wizbangbananas.com" -AccountEnabled $true -MailNickName "PSUser"
+
+New-AzureADGroup -DisplayName "PSGroup" -MailEnabled $false -SecurityEnabled $true -MailNickName "PSGroup”
+
+# Add user from the CLI
+
+az ad user create --display-name 'cliuser' --password 'P@ssword!!' --user-principal-name 'clisuer@wizbangbananas.com'
+
+# Add Group from the CLI
+
+az ad group create --display-name 'cligroup' --mail-nickname 'cligroup'
+
